@@ -6,5 +6,5 @@
  * Time: 10.04
  */
 include 'config.php';
-include 'inc/Wake.php';
+require_once ('inc/Wake.php');
 new Wake();
