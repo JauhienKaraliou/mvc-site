@@ -13,4 +13,8 @@ class MainController  {
         return __METHOD__;
     }
 
+    public function shineAction() {
+        echo '<br>shine!';
+    }
+
 }
