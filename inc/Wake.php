@@ -14,22 +14,24 @@ class Wake {
         $urlParam = explode('/',$url);
         $controllerName = $urlParam[0].'Controller';
         $controllerPath =__DIR__.'/controllers/'.strtolower($urlParam[0]).'Controller.php';
+
         if(file_exists($controllerPath)) {
             require $controllerPath;
         } else {
             throw new Exception ('Controller not found');
         }
+
         $controller = new $controllerName;
+
         $actionName = (isset($urlParam[1]))?$urlParam[1]:DEFAULT_ACTION;
         $actionName.='Action';
+
         if(method_exists($controllerName, $actionName)) {
             echo $controller -> $actionName();
         } else {
             throw new Exception ('Method not exists');
         }
 
-        echo '<br>test<br>';
-        echo __DIR__;
     }
 
 

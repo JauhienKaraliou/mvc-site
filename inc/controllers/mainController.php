@@ -6,12 +6,19 @@
  * Time: 11.35
  */
 
-class MainController  {
+class MainController extends Controller  {
 
-    public function defaultAction() {
-
-        return __METHOD__;
+    public function __construct()
+    {
+        parent::__construct();
     }
+
+    public function defaultAction()
+    {
+       $this->view->render('main');
+    }
+
+    
 
     public function shineAction() {
         echo '<br>shine!';
