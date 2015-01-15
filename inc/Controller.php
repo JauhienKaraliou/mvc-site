@@ -9,9 +9,9 @@
 class Controller {
     protected $view;
 
-    protected function __construct()
+    protected function __construct($name)
     {
-        $this->view = new View();
+        $this->view = new View($name);
     }
 
     public function defaultAction()

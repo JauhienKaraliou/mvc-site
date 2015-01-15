@@ -10,12 +10,15 @@ class MainController extends Controller  {
 
     public function __construct()
     {
-        parent::__construct();
+        parent::__construct('main');
     }
 
     public function defaultAction()
     {
-       $this->view->render('main');
+        include 'inc/models/UserModel.php';
+        $params = UserModel::getAllUsers();
+        $this->view->render($params);
+
     }
 
     
