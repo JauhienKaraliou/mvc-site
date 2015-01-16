@@ -10,10 +10,11 @@ class Wake {
 
     public function __construct()
     {
-        $url = (isset($_GET['url']))?trim($_GET['url']):DEFAULT_CONTROLLER;
+        $url = (isset($_GET['url'])) ? trim($_GET['url']) : DEFAULT_CONTROLLER;
+        $url = rtrim($url,'/');
         $urlParam = explode('/',$url);
-        $controllerName = $urlParam[0].'Controller';
-        $controllerPath =__DIR__.'/controllers/'.strtolower($urlParam[0]).'Controller.php';
+        $controllerName = ucwords($urlParam[0]).'Controller';
+        $controllerPath =__DIR__.'/controllers/'.$controllerName.'.php';
 
         if(file_exists($controllerPath)) {
             require $controllerPath;

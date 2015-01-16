@@ -7,9 +7,9 @@
 <body>
 <h1>Main page</h1>
 <ul>
-    <li>{{1}}</li>
-    <li>{{2}}</li>
-    <li>{{3}}</li>
+    <li><?= $this->users[1]?></li>
+    <li><?= $this->users[2]?></li>
+    <li><?= $this->users[3]?></li>
 </ul>
 </body>
 </html>

@@ -13,17 +13,8 @@ class MainController extends Controller  {
         parent::__construct('main');
     }
 
-    public function defaultAction()
+    public function shineAction()
     {
-        include 'inc/models/UserModel.php';
-        $params = UserModel::getAllUsers();
-        $this->view->render($params);
-
-    }
-
-    
-
-    public function shineAction() {
         echo '<br>shine!';
     }
 
