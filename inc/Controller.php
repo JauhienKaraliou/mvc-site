@@ -14,10 +14,6 @@ class Controller {
         $this->view = new View();
     }
 
-    public function defaultAction()
-    {
 
-        return __METHOD__;
-    }
 
 }
