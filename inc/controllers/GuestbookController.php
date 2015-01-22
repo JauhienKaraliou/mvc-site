@@ -16,7 +16,8 @@ class GuestbookController extends Controller {
     public function defaultAction()
     {
         require 'inc/models/GuestbookModel.php';
-        $this -> view -> messages = GuestbookModel::getMessages();
+        $this -> view -> comments = GuestbookModel::getMessages();
+        $this -> view -> pagesNum = GuestbookModel::countMessages();
         $this -> view -> render('guestbook');
 
     }

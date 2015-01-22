@@ -1,9 +1,14 @@
 <?php require 'header.php'?>
     <h1>Guestbook</h1>
-    <ul><?php foreach($this->messages as $message){ ?>
-            <li><div id="<?= $message['id']?>"><?= $message['text']?></div></li>
+    <ul><?php foreach($this->comments as $comment){ ?>
+            <li><div id="<?= $comment['id_comment']?>"><?= $comment['text']?></div></li>
         <?php } ?>
 
 
     </ul>
-<?php require 'footer.php'?>
+
+<?php
+
+require 'paginator.php';
+require 'form_add_comment.php';
+require 'footer.php'?>
