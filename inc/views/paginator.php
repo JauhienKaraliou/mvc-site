@@ -5,7 +5,7 @@
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-<?php for($page = 1; $page = $this -> pagesNum; $page++) { ?>
+<?php for($page = 1; $page <= $this -> pagesNum; $page++) { ?>
   <li><a href="<?= BASE_URL.'/guestbook/'.$page ?>"><?= $page ?></a></li>
 <?php } ?>
     <li>

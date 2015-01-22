@@ -51,7 +51,7 @@
                         </div>
                     </form></li>
                 <li>
-                    <a href="">Registration</a>
+                    <a href="<?=BASE_URL?>registration">Registration</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

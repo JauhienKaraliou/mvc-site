@@ -18,8 +18,15 @@ class GuestbookModel extends Model {
 
     public static function countMessages()
     {
-        $a = parent::countItems('st1_comments');
-        return $a;
+        $sth = DB::getInstance() -> prepare('SELECT COUNT(*) AS num FROM `st1_comments`');
+        $sth -> execute();
+        $quantity = $sth -> fetch();
+        return $quantity['num'];
+    }
+
+    public function goToPage($num)
+    {
+
     }
 
 }

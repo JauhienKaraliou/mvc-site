@@ -15,7 +15,7 @@ define('DB_USER','root');
 define('DB_PASSWORD','1276547');
 define('DB_DSN','mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8');
 define('DB_prefix','st1_');
-define('BASE_URL','mvc-site');
+define('BASE_URL',str_replace('index.php','',$_SERVER['SCRIPT_NAME']));
 function autoload($classname) {
     $clsFile = __DIR__.DS.CLS_DIR.DS.$classname.'.php';
     $clsFileAnother = __DIR__.DS.CLS_DIR.DS.'utils'.DS.$classname.'.php';
