@@ -1,15 +1,15 @@
-<form class="form-horizontal" method="post">
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
     <fieldset>
 
         <!-- Form Name -->
-        <legend>For registration fill the form</legend>
+        <legend>For registration fill the form<br><p><?= $_SESSION['resultMsg']?></p> </legend>
 
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="name">Your name</label>
             <div class="col-md-5">
                 <input id="name" name="name" type="text" placeholder="Иванов Иван" class="form-control input-md"
-                       required="" value="">
+                       required value="">
                 <p class="help-block" data-name="name"></p>
             </div>
         </div>
@@ -19,7 +19,7 @@
             <label class="col-md-4 control-label" for="email">Your email</label>
             <div class="col-md-5">
                 <input id="email" name="email" type="text" placeholder="ivanov@ivan.com" class="form-control input-md"
-                       required="" value="">
+                       required value="">
                 <p class="help-block" data-name="email"></p>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <label class="col-md-4 control-label" for="password">Enter password</label>
             <div class="col-md-5">
                 <input id="password" name="password" type="password" placeholder="" class="form-control input-md"
-                       required="">
+                       required>
                 <p class="help-block" data-name="password"></p>
             </div>
         </div>
@@ -48,7 +48,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="about_me">About you</label>
             <div class="col-md-5">
-                <textarea class="form-control" id="about_me" name="aboutMe"
+                <textarea class="form-control" id="about_me" name="about"
                           placeholder="Я начинающий программист ..."></textarea>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <label class="col-md-4 control-label" for="captcha"></label>
             <div class="col-md-5">
                 <div class="input-group">
-                    <span class="input-group-addon">{{CAPTCHA}} =</span>
+                    <span class="input-group-addon"><?= $_SESSION['captchaPic']?></span>
                     <input id="captcha" name="captcha" class="form-control" placeholder="Введите ответ"
                            type="text" required="">
                 </div>
@@ -70,7 +70,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="Register"></label>
             <div class="col-md-4">
-                <input id="Register" type="submit" name="action" value="Register" class="btn btn-info">
+                <input id="Register" type="submit" name="register" value="Register" class="btn btn-info">
             </div>
         </div>
 

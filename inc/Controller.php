@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jauhien
- * Date: 14.1.15
- * Time: 15.33
- */
 
-class Controller {
+
+class Controller
+{
     protected $view;
 
     protected function __construct()
@@ -14,6 +10,11 @@ class Controller {
         $this->view = new View();
     }
 
-
-
+    protected function redirect(array $params)
+    {
+        $address = implode('/', $params);
+        $host = $_SERVER['HTTP_HOST'];
+        $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        header("Location: http://$host$uri/$address");
+    }
 }

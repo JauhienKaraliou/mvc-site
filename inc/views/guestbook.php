@@ -1,7 +1,7 @@
 <?php require 'header.php'?>
 
 
-    <h1>Guestbook</h1>
+    <h1>Guestbook</h1> <p><?= $_SESSION['resultMsg']?></p>
 
     <ul><?php foreach($this->comments as $comment){ ?>
             <li><div id="<?= $comment['id_comment']?>"><?= $comment['text']?></div></li>

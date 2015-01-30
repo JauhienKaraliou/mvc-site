@@ -1,0 +1,1 @@
+TO finish registration follow the link: {{LINK}}

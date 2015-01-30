@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jauhien
- * Date: 14.1.15
- * Time: 16.19
- */
+
 
 class View {
 
@@ -17,5 +12,6 @@ class View {
     {
         include 'inc/views/'.$tplName.'.php';
     }
+
 
 }

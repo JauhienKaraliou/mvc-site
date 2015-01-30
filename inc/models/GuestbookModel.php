@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jauhien
- * Date: 16.1.15
- * Time: 11.15
- */
+
 
 class GuestbookModel extends Model {
 

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jauhien
- * Date: 16.1.15
- * Time: 11.13
- */
+
 
 class GuestbookController extends Controller {
 
@@ -19,6 +14,7 @@ class GuestbookController extends Controller {
         $this -> view -> comments = GuestbookModel::getMessages();
         $this -> view -> pagesNum = GuestbookModel::countMessages();
         $this -> view -> render('guestbook');
+        $_SESSION['resultMsg'] = '';
 
     }
 

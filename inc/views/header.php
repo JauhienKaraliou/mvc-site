@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
-   <!-- <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <meta charset="utf-8">
     <title>MVC</title>
 </head>
@@ -43,15 +45,14 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><form class="navbar-form navbar-right" method="post">
-                        <div class="form-inline">
-                            <input type="text" class="form-inline" placeholder="Username">
-                            <input type="password" class="form-inline" placeholder="Password">
-                        <button type="submit" class="btn btn-default">Log in</button>
-                        </div>
-                    </form></li>
+                <li><?php
+                    if(isset($_SESSION['username'])) {
+                        include 'form_logout.php';
+                    } else {
+                        include'form_login.php';
+                    }?></li>
                 <li>
-                    <a href="<?=BASE_URL?>registration">Registration</a>
+                    <a href="<?=BASE_URL?>users/registration">Registration</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
